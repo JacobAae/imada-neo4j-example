@@ -1,0 +1,10 @@
+ne04j:
+    image: neo4j:3.0
+    hostname: neo4j
+    ports:
+        - "7474:7474"
+        - "7687:7687"
+    volumes:
+        - ./data:/data
+        - ./logs:/logs
+
