@@ -1,0 +1,47 @@
+= Neo4j example
+
+Example of running Neo4j locallly with Docker and embedded, for use as demo and exercises in the DM566 course at IMADA, SDU.
+
+== Run Neo4j
+
+Use the Docker-compose file to get Neo4j up and running, including the interface where you can try it out. Do this with this command:
+
+ docker-compose up
+
+You can add flag `-d` if you wish to run it as a deamon.
+
+Stop and remove it using
+
+ docker-compose kill
+
+Neo4J is now available on address: http://localhost:7474
+
+=== Trying it out
+
+After creating a password to Neo4j, click the "Write code" button, and run through the "Movie Graph" example.
+
+
+=== Application
+
+Run using
+
+ ./gradlew run
+
+Available commands are:
+
+* *demo* Demo the usage of Neo4j
+
+== Exercises
+
+The code is in Groovy, but you can program JAVA if you prefer this. Very few JAVA constructs are invalid Groovy (Up to JAVA 7).
+
+. Run through the "Movie Graph" example described above.
+. Clone the repo, and try to run the code using `./gradlew run` give it input demo
+. Modify the application, implement a method that loads the "Movie Graph" data, when *load* is given as input
+. Implement a *lookup* target, that takes an actor name, and lists all movies the actor has starred in.
+. Implement the "Kevin Bacon path", by asking for an actor name, with the target *bacon*
+. Implement the *cleanup* target, that will remove all from the database.
+
+== Resources
+
+* http://www.baeldung.com/java-neo4j
